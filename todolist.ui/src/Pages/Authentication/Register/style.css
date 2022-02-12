@@ -1,0 +1,10 @@
+.form-signin.register .password
+{
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+
+.form-signin.register .password-confirm
+{
+    margin-bottom: 10px;
+}
