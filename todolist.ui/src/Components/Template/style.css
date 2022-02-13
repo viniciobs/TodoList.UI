@@ -55,9 +55,9 @@ a {
     cursor: pointer
 }
 
-#logo {
+.nav img {
     height: 30px;
-    margin-left: 18px;
+    margin-left: calc(var(--nav-width) - 50px);
     transition: .5s;
 }
 
@@ -136,10 +136,6 @@ a {
     padding-left: calc(var(--nav-width) + 1rem)
 }
 
-.logo-pd {
-    margin-left: var(--nav-width)!important
-}
-
 .active {
     color: var(--white-color)
 }
@@ -179,5 +175,9 @@ a {
 
     .body-pd {
         padding-left: calc(var(--nav-width) + 140px)
+    }
+
+    .logo-pd {
+        margin-left: var(--nav-width)!important
     }
 }
