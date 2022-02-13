@@ -15,7 +15,6 @@ export const GetToken = () => {
 
 export const GetUsername = () => {
     let storageData = GetStorageData();
-
     if (storageData)
         return storageData.userName;
 

@@ -1,13 +1,11 @@
 import React from 'react';
-import Header from '../../Components/Header';
+import Template from '../../Components/Template';
 
 const Dashboard = () => {
     return (
-        <>
-            <Header />
-            <h1>Hello! I'm your Dashboard</h1>
-        </>
-
+            <Template>
+                <h1>Hello! I'm your Dashboard</h1>
+            </Template>
     )
 }
 
