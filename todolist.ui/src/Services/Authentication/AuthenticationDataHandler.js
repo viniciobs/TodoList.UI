@@ -6,9 +6,18 @@ export const IsAuthenticated = () => {
 }
 
 export const GetToken = () => {
-    let storageData = localStorage.getItem(authenticatedData);
+    let storageData = GetStorageData();
     if (storageData)
         return storageData.token;
+
+    return null;
+}
+
+export const GetUsername = () => {
+    let storageData = GetStorageData();
+
+    if (storageData)
+        return storageData.userName;
 
     return null;
 }
@@ -18,5 +27,13 @@ export const Clear = () => {
 }
 
 export const Save = (data) => {
-    localStorage.setItem(authenticatedData, data);
+    let authData = JSON.stringify(data);
+    localStorage.setItem(authenticatedData, authData);
+}
+
+const GetStorageData = () => {
+    let storageData = localStorage.getItem(authenticatedData);
+    let data = JSON.parse(storageData);
+
+    return data;
 }

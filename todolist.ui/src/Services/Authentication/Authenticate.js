@@ -18,7 +18,7 @@ const Authenticate = async (username, password) => {
     if (errorDescription != undefined)
         return { error: errorDescription };
 
-    SaveAuthData(response);
+    SaveAuthData(response.data);
 
     return { error: null };
 }

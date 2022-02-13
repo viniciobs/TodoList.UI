@@ -18,7 +18,7 @@ const Login = () => {
     const handleLoginAction = async (e) => {
         e.preventDefault();
 
-        let username = document.getElementById("username").value;
+        let username = document.getElementById("login").value;
         let password = document.getElementById("password").value;
 
         let loginResult = await Authenticate(username, password);
