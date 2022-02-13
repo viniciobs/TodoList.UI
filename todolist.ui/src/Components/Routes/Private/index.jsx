@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 
-import IsAuthenticated from '../../../Services/Authentication/IsAuthenticated';
+import {IsAuthenticated} from '../../../Services/Authentication/AuthenticationDataHandler';
 
 const PrivateRoute = ({ children }) => {
-    return IsAuthenticated() ? children : <Navigate to="/login"/>
+    return IsAuthenticated() ? children : <Navigate to="/login" />
 }
 
 export default PrivateRoute;

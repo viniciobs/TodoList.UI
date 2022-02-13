@@ -11,7 +11,7 @@ const Form = (props) => {
                 <form className={"form-signin " + props.type}>
                     {props.children}
                     <div className="d-grid gap-2">
-                        <button className="btn btn-primary" type="submit">{props.buttonText}</button>
+                        <button className="btn btn-primary" type="submit" onClick={(e) => {props.buttonClickAction(e)}}>{props.buttonText}</button>
                     </div>
                 </form>
             </div>
