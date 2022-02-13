@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../../Components/Header';
 
 const Dashboard = () => {
     return (
-        <h1>Hello! I'm your Dashboard</h1>
+        <>
+            <Header />
+            <h1>Hello! I'm your Dashboard</h1>
+        </>
+
     )
 }
 
