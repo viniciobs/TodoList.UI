@@ -152,10 +152,6 @@ a {
     margin-top: calc(var(--header-height) + 3rem)
 }
 
-.is-valid, .is-invalid{
-    border-color: #ced4da;
-}
-
 @media screen and (min-width: 768px) {
     body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;

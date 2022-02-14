@@ -4,6 +4,7 @@ import Form from '../Components/Form';
 import './style.css';
 import Create from '../../../Services/Accounts/Create';
 import {IsAuthenticated} from '../../../Services/Authentication/AuthenticationDataHandler';
+import {DisplayErrorIfNotFilled} from '../../../Helpers/Validators';
 
 const Register = () => {
     let navigate = useNavigate();
@@ -29,9 +30,9 @@ const Register = () => {
     return (
         <>
             <Form type="register" buttonText="Register" buttonClickAction={handleRegisterAction}>
-                <input id="name" type="text" className="form-control name" placeholder="Name" required autoFocus />
-                <input id="login" type="text" className="form-control login" placeholder="Login" required />
-                <input id="password" type="password" className="form-control password" placeholder="Password" required />
+                <input id="name" type="text" className="form-control name" placeholder="Name" autoFocus onBlur={(e) => {DisplayErrorIfNotFilled(e)}} />
+                <input id="login" type="text" className="form-control login" placeholder="Login" onBlur={(e) => {DisplayErrorIfNotFilled(e)}}/>
+                <input id="password" type="password" className="form-control password" placeholder="Password" onBlur={(e) => {DisplayErrorIfNotFilled(e)}} />
             </Form>
             <Link to="/login" className='text-center link'>Log in</Link>
         </>
