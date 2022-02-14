@@ -15,13 +15,24 @@ const Login = () => {
             return navigate("/");
     }, []);
 
+    const DisplayErrorIfNotFilled = (e) => {
+        let field = e.target;
+        let isFilled = field.value;
+        if (!isFilled){
+            field.classList.add("is-invalid");
+            return false;
+        }
+
+        field.classList.remove("is-invalid");
+    }
+
     const handleLoginAction = async (e) => {
         e.preventDefault();
 
-        let username = document.getElementById("login").value;
+        let login = document.getElementById("login").value;
         let password = document.getElementById("password").value;
 
-        let loginResult = await Authenticate(username, password);
+        let loginResult = await Authenticate(login, password);
 
         if (loginResult.error == null)
             return navigate("/");
@@ -30,8 +41,8 @@ const Login = () => {
     return (
         <>
             <Form type="login" buttonText="Log in" buttonClickAction={handleLoginAction}>
-                <input id="login" type="text" className="form-control login" placeholder="Login" required autoFocus />
-                <input id="password" type="password" className="form-control password" placeholder="Password" required />
+                <input id="login" type="text" className="form-control login" placeholder="Login" autoFocus onBlur={(e) => {DisplayErrorIfNotFilled(e)}} />
+                <input id="password" type="password" className="form-control password" placeholder="Password" onBlur={(e) => {DisplayErrorIfNotFilled(e)}} />
             </Form>
             <Link to="/register" className='text-center link'>Create an account</Link>
         </>
