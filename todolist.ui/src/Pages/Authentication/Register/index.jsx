@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import Form from '../Components/Form';
 import './style.css';
 import Create from '../../../Services/Accounts/Create';
+import {IsAuthenticated} from '../../../Services/Authentication/AuthenticationDataHandler';
 
 const Register = () => {
     let navigate = useNavigate();
+
+    useEffect(() => {
+        if (IsAuthenticated())
+            return navigate("/");
+    }, []);
 
     const handleRegisterAction = async (e) => {
         e.preventDefault();
