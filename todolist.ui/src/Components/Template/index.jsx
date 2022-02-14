@@ -10,7 +10,7 @@ import ConfigureMenu from './assets/script/menu.js';
 import {
     BiMenu as Menu,
     BiHome as Home,
-    BiLogOut as Logout
+    BiUser as Account
 } from "react-icons/bi";
 
 const Header = (props) => {
@@ -18,7 +18,20 @@ const Header = (props) => {
 
     useEffect(() => {
         ConfigureMenu();
+
+        var element = document.getElementById("body-pd");
+        element.classList.remove("body-pd");
     }, []);
+
+    const GetNavLinkClass = (page) => {
+        let classes = "nav_link";
+        let isCurrentPage = window.location.pathname == page;
+
+        if (isCurrentPage)
+            classes += " active";
+
+        return classes;
+    }
 
     const Logout = (e) => {
         e.preventDefault();
@@ -40,7 +53,8 @@ const Header = (props) => {
                     <div>
                         <img src={Icon} id="logo" alt="todo-list-icon" />
                         <div className="nav_list">
-                            <Link to="/" className="nav_link active"> <Home /> <span className="nav_name">Home</span> </Link>
+                            <Link to="/" className={GetNavLinkClass("/")}> <Home /> <span className="nav_name">Home</span> </Link>
+                            <Link to="/account" className={GetNavLinkClass("/account")}> <Account /> <span className="nav_name">Account</span> </Link>
                         </div>
                     </div>
                 </nav>

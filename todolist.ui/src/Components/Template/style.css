@@ -111,7 +111,6 @@ a {
 .nav_link {
     position: relative;
     color: var(--first-color-light);
-    margin-bottom: 1.5rem;
     transition: .3s;
     text-decoration: none;
 }
