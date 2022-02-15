@@ -4,7 +4,6 @@ export const ValidateRequiredFields = (form) => {
 
     for (let i = 0; i < form.elements.length; i++) {
         let element = form.elements[i];
-        console.log(element.tagName);
 
         let isValidatable = validatableTypes.some(x => x == element.tagName);
         if (!isValidatable) continue;
