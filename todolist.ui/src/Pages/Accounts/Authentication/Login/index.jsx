@@ -36,7 +36,7 @@ const Login = () => {
 
     return (
         <>
-            <Form id="form-login" type="login" buttonText="Log in" buttonClickAction={handleLoginAction}>
+            <Form id="form-login" buttonText="Log in" buttonClickAction={handleLoginAction}>
                 <input id="login" type="text" className="form-control login" placeholder="Login" autoFocus required />
                 <input id="password" type="password" className="form-control password" placeholder="Password" required />
             </Form>

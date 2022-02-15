@@ -34,7 +34,7 @@ const Register = () => {
 
     return (
         <>
-            <Form id="register" type="register" buttonText="Register" buttonClickAction={handleRegisterAction}>
+            <Form id="register" buttonText="Register" buttonClickAction={handleRegisterAction}>
                 <input id="name" type="text" className="form-control name" placeholder="Name" autoFocus required />
                 <input id="login" type="text" className="form-control login" placeholder="Login" required />
                 <input id="password" type="password" className="form-control password" placeholder="Password" required />

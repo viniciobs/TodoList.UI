@@ -28,7 +28,7 @@ const Form = (props) => {
        <Section>
             <div className="account-wall">
                 <img className="profile-img" src={Icon} alt="user-icon"/>
-                <form id={props.id} className={"form-signin " + props.type} noValidate>
+                <form id={props.id} className="form-signin" noValidate>
                     {props.children}
                     <div className="d-grid gap-2">
                         <button className="btn btn-primary" type="submit" onClick={(e) => {submit(e)}} >{props.buttonText}</button>
