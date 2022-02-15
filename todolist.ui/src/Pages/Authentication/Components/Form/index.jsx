@@ -6,16 +6,21 @@ import LoadingSpinner from '../../../../Components/LoadingSpinner';
 
 const Form = (props) => {
     const [isLoading, setIsLoading] = useState(false);
+    const [message, setMessage] = useState();
+
+    let btn = document.getElementById('btn-submit');
 
     const submit = (e) => {
-        e.target.disabled = true;
+        let btn = e.target;
 
         setIsLoading(true);
+        btn.disabled = true;
 
         props.buttonClickAction(e)
-        .then(() => {
+        .then((result) => {
             setIsLoading(false);
-            e.target.disabled = false;
+            btn.disabled = false;
+            setMessage(result);
         });
     }
 
@@ -28,6 +33,7 @@ const Form = (props) => {
                     <div className="d-grid gap-2">
                         <button className="btn btn-primary" type="submit" onClick={(e) => {submit(e)}} >{props.buttonText}</button>
                         { isLoading ? <LoadingSpinner /> : "" }
+                        <span className='text-center error'>{message}</span>
                     </div>
                 </form>
             </div>

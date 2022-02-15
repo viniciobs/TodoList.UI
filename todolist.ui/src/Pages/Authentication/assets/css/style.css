@@ -65,3 +65,7 @@ section
 .is-valid, .is-invalid{
     border-color: #ced4da!important;
 }
+
+.error {
+    font-weight: 500;
+}

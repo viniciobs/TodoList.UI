@@ -26,8 +26,10 @@ const Register = () => {
 
         let loginResult = await Create(name, login, password);
 
-        if (loginResult.error == null)
-            return navigate("/");
+        if (loginResult.error != null)
+            return loginResult.error;
+
+        return navigate("/");
     }
 
     return (

@@ -27,8 +27,10 @@ const Login = () => {
 
         if (login && password){
             let loginResult = await Authenticate(login, password);
-            if (loginResult.error == null)
-                return navigate("/");
+            if (loginResult.error != null)
+                return loginResult.error;
+
+            return navigate("/");
         }
     }
 
