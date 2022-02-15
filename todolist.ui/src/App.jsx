@@ -3,10 +3,10 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import PrivateRoute from './Components/Routes/Private';
 
-import Login from './Pages/Authentication/Login';
-import Register from './Pages/Authentication/Register';
+import Login from './Pages/Accounts/Authentication/Login';
+import Register from './Pages/Accounts/Authentication/Register';
 import Dashboard from './Pages/Dashboard';
-import Account from './Pages/Account';
+import Account from './Pages/Accounts';
 
 const App = () => {
     return (

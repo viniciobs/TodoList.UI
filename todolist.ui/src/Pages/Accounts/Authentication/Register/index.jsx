@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import Form from '../Components/Form';
+import Form from '../../Components/Form';
 import './style.css';
-import Create from '../../../Services/Accounts/Create';
-import {IsAuthenticated} from '../../../Services/Authentication/AuthenticationDataHandler';
-import {ValidateRequiredFields} from '../../../Helpers/Validators';
+import Create from '../../../../Services/Accounts/Create';
+import {IsAuthenticated} from '../../../../Services/Authentication/AuthenticationDataHandler';
+import {ValidateRequiredFields} from '../../../../Helpers/Validators';
 
 const Register = () => {
     let navigate = useNavigate();
