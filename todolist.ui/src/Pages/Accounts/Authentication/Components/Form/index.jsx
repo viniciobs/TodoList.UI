@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Section from '../Section';
-import Icon from '../../assets/Images/login.png';
-import '../../assets/css/style.css';
-import LoadingSpinner from '../../../../Components/LoadingSpinner';
+import Icon from '../../../assets/Images/login.png';
+import '../../../assets/css/style.css';
+import LoadingSpinner from '../../../../../Components/LoadingSpinner';
 
 const Form = (props) => {
     const [isLoading, setIsLoading] = useState(false);

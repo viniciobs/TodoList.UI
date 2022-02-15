@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import Form from '../../Components/Form';
+import Form from '../Components/Form';
 import './style.css';
 import Create from '../../../../Services/Accounts/Create';
 import {IsAuthenticated} from '../../../../Services/Authentication/AuthenticationDataHandler';
@@ -29,7 +29,7 @@ const Register = () => {
         if (loginResult.error != null)
             return loginResult.error;
 
-        return navigate("/");
+        return navigate("/account");
     }
 
     return (

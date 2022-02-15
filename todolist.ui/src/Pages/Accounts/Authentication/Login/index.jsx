@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
-import Form from '../../Components/Form';
+import Form from '../Components/Form';
 import './style.css'
 
 import {ValidateRequiredFields} from '../../../../Helpers/Validators';

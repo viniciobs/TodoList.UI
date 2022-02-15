@@ -1,11 +1,13 @@
 import React from 'react';
 import Template from '../../Components/Template';
-import Form from './Components/Form';
 
 const Account = () => {
+    const Edit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <Template title="Account settings">
-
         </Template>
     )
 }
