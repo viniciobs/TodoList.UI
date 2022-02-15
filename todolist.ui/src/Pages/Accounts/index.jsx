@@ -1,10 +1,11 @@
 import React from 'react';
 import Template from '../../Components/Template';
+import Form from './Components/Form';
 
 const Account = () => {
     return (
-        <Template>
-            <h1>Hello! I am your account page</h1>
+        <Template title="Account settings">
+
         </Template>
     )
 }
