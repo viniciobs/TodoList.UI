@@ -135,11 +135,11 @@ a {
     padding-left: calc(var(--nav-width) + 1rem)
 }
 
-.active {
+nav .active {
     color: var(--white-color)
 }
 
-.active::before {
+nav .active::before {
     content: '';
     position: absolute;
     left: 0;
@@ -150,6 +150,10 @@ a {
 
 .container{
     margin-top: calc(var(--header-height) + 3rem)
+}
+
+.page-title{
+    margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 768px) {
