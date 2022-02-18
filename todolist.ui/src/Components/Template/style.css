@@ -148,10 +148,6 @@ nav .active::before {
     background-color: var(--white-color)
 }
 
-.container{
-    margin-top: calc(var(--header-height) + 3rem)
-}
-
 .page-title{
     margin-bottom: 3rem;
 }
