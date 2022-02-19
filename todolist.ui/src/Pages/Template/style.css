@@ -131,7 +131,7 @@ a {
 }
 
 .body-pd {
-    padding-left: calc(var(--nav-width) + 1rem)!important;
+    padding-left: var(--nav-width);
 }
 
 nav .active {
@@ -174,7 +174,7 @@ nav .active::before {
     }
 
     .body-pd {
-        padding-left: calc(var(--nav-width) + 140px)
+        padding-left: calc(var(--nav-width) + 1rem)
     }
 
     .logo-pd {

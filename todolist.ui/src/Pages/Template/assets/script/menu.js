@@ -9,9 +9,8 @@ const ConfigureMenu = () => {
         if(toggle && nav && bodypd && headerpd && logopd) {
             toggle.addEventListener('click', ()=> {
                 nav.classList.toggle('show')
-                toggle.classList.toggle('bx-x')
                 bodypd.classList.toggle('body-pd')
-                headerpd.classList.toggle('body-pd')
+                headerpd.classList.toggle('header-pd')
                 logopd.classList.toggle('logo-pd')
             })
         }
