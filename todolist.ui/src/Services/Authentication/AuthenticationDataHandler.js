@@ -13,6 +13,14 @@ export const GetToken = () => {
     return null;
 }
 
+export const GetUserId = () => {
+    let storageData = GetStorageData();
+    if (storageData)
+        return storageData.userId;
+
+    return null;
+}
+
 export const GetUsername = () => {
     let storageData = GetStorageData();
     if (storageData)

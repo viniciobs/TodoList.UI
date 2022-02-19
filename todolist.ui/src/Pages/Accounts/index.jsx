@@ -1,29 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Template from '../../Pages/Template';
 import Image from '../../Images/login.png';
 import './style.css';
+import LoadData from '../../Services/Accounts/LoadData.js';
+import { useNavigate } from 'react-router-dom';
 
 const Account = () => {
+    const [account, setAccount] = useState({});
+    let navigate = useNavigate();
+
+    useEffect(async () => {
+        let loadAccountDataResponse = await LoadData();
+        if (loadAccountDataResponse.error)
+            return navigate("/error");
+
+    },[]);
 
     return (
         <Template title="Account settings">
             <form>
                 <img className="profile-img" src={Image} alt="user-image"/>
                 <div className="form-group row">
-                    <label htmlFor="name" className="col-sm-2 col-form-label field-title">Name</label>
-                    <div className="col-sm-10">
+                    <label htmlFor="name" className="col-sm-1 col-form-label field-title">Name</label>
+                    <div className="col-sm-11">
                         <input type="text" readOnly className="form-control-plaintext" id="name" value="email@example.com"/>
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label htmlFor="login" className="col-sm-2 col-form-label field-title">Login</label>
-                    <div className="col-sm-10">
+                    <label htmlFor="login" className="col-sm-1 col-form-label field-title">Login</label>
+                    <div className="col-sm-11">
                         <input type="text" readOnly className="form-control-plaintext" id="login" value="tetete"/>
                     </div>
                 </div>
                 <br />
                 <div className="form-group row">
-                    <div className="col-sm-2 btn-group btn-group-toggle status" data-toggle="buttons">
+                    <div className="col-sm-2 btn-group btn-group-toggle status blocked" data-toggle="buttons">
                         <label className="btn btn-secondary btn-sm active">
                             <input type="radio" name="options" id="status-active" autoComplete="off" checked /> Active
                         </label>
