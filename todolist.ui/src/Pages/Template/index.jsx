@@ -59,7 +59,7 @@ const Header = (props) => {
                     </div>
                 </nav>
             </div>
-            <div className='container'>
+            <div className='content'>
                 <h3 className="page-title">{props.title}</h3>
                 {props.children}
             </div>

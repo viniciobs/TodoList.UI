@@ -3,14 +3,14 @@ section
     margin-top: 5rem;
 }
 
-.form-signin
+.form-auth
 {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
 }
 
-.form-signin .form-control
+.form-auth .form-control
 {
     position: relative;
     font-size: 16px;
@@ -21,12 +21,12 @@ section
     box-sizing: border-box;
 }
 
-.form-signin .form-control:focus
+.form-auth .form-control:focus
 {
     z-index: 2;
 }
 
-.form-signin input[type="text"]
+.form-auth input[type="text"]
 {
     margin-bottom: -1px;
     border-bottom-left-radius: 0;

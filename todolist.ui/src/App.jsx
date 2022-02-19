@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import PrivateRoute from './Components/Routes/Private';
+import PrivateRoute from './Components/PrivateRoute';
 
-import Login from './Pages/Accounts/Authentication/Login';
-import Register from './Pages/Accounts/Authentication/Register';
+import Login from './Pages/Login';
+import Signup from './Pages/SignUp';
 import Dashboard from './Pages/Dashboard';
 import Account from './Pages/Accounts';
 
@@ -13,7 +13,7 @@ const App = () => {
         <Router>
             <Routes>
                 <Route exact path="/login" element={<Login />}/>
-                <Route exact path="/register" element={<Register /> }/>
+                <Route exact path="/signup" element={<Signup /> }/>
                 <Route exact path="/" element={<PrivateRoute> <Dashboard /> </PrivateRoute>}/>
                 <Route exact path="/account" element={<PrivateRoute> <Account /> </PrivateRoute>}/>
             </Routes>

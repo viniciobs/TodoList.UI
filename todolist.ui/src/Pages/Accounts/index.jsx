@@ -1,6 +1,6 @@
 import React from 'react';
-import Template from '../../Components/Template';
-import Image from './assets/Images/login.png';
+import Template from '../../Pages/Template';
+import Image from '../../Images/login.png';
 import './style.css';
 
 const Account = () => {

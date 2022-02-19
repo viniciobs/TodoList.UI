@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
-import Form from '../Components/Form';
+import Form from '../../Components/AuthenticationForm';
 import './style.css'
 
-import {ValidateRequiredFields} from '../../../../Helpers/Validators';
-import Authenticate from '../../../../Services/Authentication/Authenticate';
-import {IsAuthenticated} from '../../../../Services/Authentication/AuthenticationDataHandler';
+import {ValidateRequiredFields} from '../../Services/Validators';
+import Authenticate from '../../Services/Authentication/Authenticate';
+import {IsAuthenticated} from '../../Services/Authentication/AuthenticationDataHandler';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -37,10 +37,10 @@ const Login = () => {
     return (
         <>
             <Form id="form-login" buttonText="Log in" buttonClickAction={handleLoginAction}>
-                <input id="login" type="text" className="form-control login" placeholder="Login" autoFocus required />
-                <input id="password" type="password" className="form-control password" placeholder="Password" required />
+                <input id="login" type="text" className="form-control" placeholder="Login" autoFocus required />
+                <input id="password" type="password" className="form-control" placeholder="Password" required />
             </Form>
-            <Link to="/register" className='text-center link'>Create an account</Link>
+            <Link to="/signup" className='text-center link'>Create an account</Link>
         </>
     )
 }
