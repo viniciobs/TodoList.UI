@@ -52,6 +52,13 @@ export const UpdateUserName = (name) => {
     Save(storageData);
 }
 
+export const UpdateUserStatus = (isActive) => {
+    let storageData = GetStorageData();
+    storageData["isActive"] = isActive;
+
+    Save(storageData);
+}
+
 export const UpdateUserLogin = (login) => {
     let storageData = GetStorageData();
     storageData["login"] = login;

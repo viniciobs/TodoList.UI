@@ -2,17 +2,17 @@ import Axios from 'axios';
 
 import {GetToken} from '../Authentication/AuthenticationDataHandler';
 
-const AlterPassword = async (currentPassword, newPassword) => {
-    const changePasswordUrl = "https://localhost:44304/accounts/ChangePassword";
+const AlterStatus = async (active) => {
+    const activateUrl = "https://localhost:44304/accounts/Activate";
+    const deactivateUrl = "https://localhost:44304/accounts/Deactivate";
+
+    let urlAction = active ? activateUrl : deactivateUrl;
+
     let accessToken = GetToken();
     let errorDescription;
 
     await Axios
-        .patch(changePasswordUrl,
-            {
-                oldPassword: currentPassword,
-                newPassword: newPassword
-            }, {headers: {"Authorization": `Bearer ${accessToken}`}})
+        .patch(urlAction, {headers: {"Authorization": `Bearer ${accessToken}`}})
         .catch((exception) => {
             errorDescription = exception.response.data.message;
         });
@@ -23,4 +23,4 @@ const AlterPassword = async (currentPassword, newPassword) => {
     return { error: null };
 }
 
-export default AlterPassword;
+export default AlterStatus;
