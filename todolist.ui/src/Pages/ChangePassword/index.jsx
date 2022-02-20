@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import Loading from '../../Components/LoadingSpinner';
-import Template from '../../Pages/Template';
+import Template from '../Template';
 
 import {ValidateRequiredFields} from '../../Services/Validators';
 import AlterPassword from '../../Services/Accounts/AlterPassword';

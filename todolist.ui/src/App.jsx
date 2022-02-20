@@ -9,6 +9,7 @@ import Error from './Pages/Error';
 import Dashboard from './Pages/Dashboard';
 import Account from './Pages/Accounts';
 import ChangePassword from './Pages/ChangePassword';
+import AccountEdit from './Pages/AccountEdit';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 <Route exact path="/" element={<PrivateRoute> <Dashboard /> </PrivateRoute>}/>
                 <Route exact path="/account" element={<PrivateRoute> <Account /> </PrivateRoute>}/>
                 <Route exact path="/account/change-password" element={<PrivateRoute> <ChangePassword /> </PrivateRoute>}/>
+                <Route exact path="/account/edit" element={<PrivateRoute> <AccountEdit /> </PrivateRoute>}/>
             </Routes>
         </Router>
     )

@@ -21,12 +21,42 @@ export const GetUserId = () => {
     return null;
 }
 
-export const GetUsername = () => {
+export const GetUserName = () => {
     let storageData = GetStorageData();
     if (storageData)
-        return storageData.userName;
+        return storageData.name;
 
     return null;
+}
+
+export const GetUserLogin = () => {
+    let storageData = GetStorageData();
+    if (storageData)
+        return storageData.login;
+
+    return null;
+}
+
+export const GetIsUserActive = () => {
+    let storageData = GetStorageData();
+    if (storageData)
+        return storageData.isActive;
+
+    return null;
+}
+
+export const UpdateUserName = (name) => {
+    let storageData = GetStorageData();
+    storageData["name"] = name;
+
+    Save(storageData);
+}
+
+export const UpdateUserLogin = (login) => {
+    let storageData = GetStorageData();
+    storageData["login"] = login;
+
+    Save(storageData);
 }
 
 export const Clear = () => {
@@ -34,6 +64,8 @@ export const Clear = () => {
 }
 
 export const Save = (data) => {
+    Clear();
+
     let authData = JSON.stringify(data);
     localStorage.setItem(authenticatedData, authData);
 }
