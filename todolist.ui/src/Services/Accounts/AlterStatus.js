@@ -7,14 +7,14 @@ const AlterStatus = async (active) => {
     const deactivateUrl = "https://localhost:44304/accounts/Deactivate";
 
     let urlAction = active ? activateUrl : deactivateUrl;
-
     let accessToken = GetToken();
+
     let errorDescription;
 
-    await Axios
-        .patch(urlAction, {headers: {"Authorization": `Bearer ${accessToken}`}})
+    let response = await Axios
+        .patch(urlAction, {}, {headers: {"Authorization": `Bearer ${accessToken}`}})
         .catch((exception) => {
-            errorDescription = exception.response.data.message;
+            errorDescription = exception;
         });
 
     if (errorDescription != undefined)

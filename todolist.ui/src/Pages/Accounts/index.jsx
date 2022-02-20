@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Template from '../../Pages/Template';
 import Image from '../../Images/login.png';
 import './style.css';
-import {GetUserLogin, GetUserName, GetIsUserActive, UpdateUserStatus} from '../../Services/Authentication/AuthenticationDataHandler';
+import {GetUserLogin, GetUserName, GetIsUserActive, UpdateUserStatus as UpdateUserStorageStatus} from '../../Services/Authentication/AuthenticationDataHandler';
 import AlterStatus from '../../Services/Accounts/AlterStatus';
 import { Link, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../Components/LoadingSpinner';
@@ -48,9 +48,8 @@ const Account = () => {
         if (response.error)
             return navigate('/error');
 
+        UpdateUserStorageStatus(!isActive);
         setIsActive(!isActive);
-
-        UpdateUserStatus(isActive);
         UpdateStatusLinkMessage();
         setIsloading(false);
     }
