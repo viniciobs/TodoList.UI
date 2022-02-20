@@ -25,7 +25,7 @@ const Header = (props) => {
 
     const GetNavLinkClass = (page) => {
         let classes = "nav_link";
-        let isCurrentPage = window.location.pathname == page;
+        let isCurrentPage = window.location.pathname.split('/')[1] == page;
 
         if (isCurrentPage)
             classes += " active";
@@ -53,8 +53,8 @@ const Header = (props) => {
                     <div>
                         <img src={Icon} id="logo" alt="todo-list-icon" />
                         <div className="nav_list">
-                            <Link to="/" className={GetNavLinkClass("/")}> <Dashboard /> <span className="nav_name">Home</span> </Link>
-                            <Link to="/account" className={GetNavLinkClass("/account")}> <Account /> <span className="nav_name">Account</span> </Link>
+                            <Link to="/" className={GetNavLinkClass("")}> <Dashboard /> <span className="nav_name">Home</span> </Link>
+                            <Link to="/account" className={GetNavLinkClass("account")}> <Account /> <span className="nav_name">Account</span> </Link>
                         </div>
                     </div>
                 </nav>

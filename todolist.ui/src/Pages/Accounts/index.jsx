@@ -3,7 +3,7 @@ import Template from '../../Pages/Template';
 import Image from '../../Images/login.png';
 import './style.css';
 import LoadData from '../../Services/Accounts/LoadData.js';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../Components/LoadingSpinner';
 
 const Account = () => {
@@ -18,7 +18,7 @@ const Account = () => {
             return navigate("/error");
 
         setAccount(loadAccountDataResponse.data);
-        // setIsLoading(false);
+        setIsLoading(false);
     },[]);
 
     return (
@@ -51,7 +51,7 @@ const Account = () => {
             <br/>
             <div className='form-group row'>
                 <div className='col-12'>
-                    <a id="edit-link" role="button" className="btn-link">Edit</a> | <a id="change-password" role="button" className="btn-link">Change password</a>
+                    <Link to="#" id="edit-link" role="button" className="btn-link">Edit</Link> | <Link to="/account/change-password" id="change-password" role="button" className="btn-link">Change password</Link>
                 </div>
             </div>
         </Template>
