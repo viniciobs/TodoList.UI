@@ -8,10 +8,10 @@
     pointer-events: none;
 }
 
-.status.blocked label{
-    cursor: default;
-}
-
 .profile-img{
     margin: 0 0 30px;
+}
+
+.status .btn{
+    cursor: default;
 }

@@ -7,7 +7,7 @@ import {ValidateRequiredFields} from '../../Services/Validators';
 import AlterPassword from '../../Services/Accounts/AlterPassword';
 
 import './style.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ChangePassword = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -78,6 +78,7 @@ const ChangePassword = () => {
                         <button id='confirm-change' className='btn btn-primary' onClick={(e) => {ChangePassword(e)}}>Confirm</button>
                     </div>
                 </form>
+                <Link to="/account">back</Link>
             </div>
         </Template>
     )

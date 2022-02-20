@@ -28,24 +28,20 @@ const Account = () => {
             <div className="form-group row">
                 <label htmlFor="name" className="col-sm-1 col-form-label field-title">Name</label>
                 <div className="col-sm-11">
-                    <input type="text" readOnly className="form-control-plaintext" id="name" value={account.name} />
+                    <span className="form-control-plaintext">{account.name}</span>
                 </div>
             </div>
             <div className="form-group row">
                 <label htmlFor="login" className="col-sm-1 col-form-label field-title">Login</label>
                 <div className="col-sm-11">
-                    <input type="text" readOnly className="form-control-plaintext" id="login" value={account.login}/>
+                    <span className="form-control-plaintext">{account.login}</span>
                 </div>
             </div>
             <br />
             <div className="form-group row">
-                <div className="col-sm-2 btn-group btn-group-toggle status blocked" data-toggle="buttons">
-                    <label className="btn btn-secondary btn-sm active">
-                        <input type="radio" name="options" id="status-active" autoComplete="off" checked={account.isActive}/> Active
-                    </label>
-                    <label className="btn btn-secondary btn-sm">
-                        <input type="radio" name="options" id="status-inactive" autoComplete="off" checked={!account.isActive}/> Inactive
-                    </label>
+                <div className="col-sm-2 btn-group btn-group-toggle status" data-toggle="buttons">
+                    <label className={(account.isActive ? "active " : "") + "btn btn-secondary btn-sm"}>
+                        {account.isActive ? 'Active' : 'Inactive'}</label>
                 </div>
             </div>
             <br/>
