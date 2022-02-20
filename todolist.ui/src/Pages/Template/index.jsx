@@ -10,7 +10,8 @@ import ConfigureMenu from './assets/script/menu.js';
 import {
     BiMenu as Menu,
     BiBarChart as Dashboard,
-    BiUser as Account
+    BiUser as Account,
+    BiTask as Task
 } from "react-icons/bi";
 
 const Header = (props) => {
@@ -55,6 +56,7 @@ const Header = (props) => {
                         <div className="nav_list">
                             <Link to="/" className={GetNavLinkClass("")}> <Dashboard /> <span className="nav_name">Home</span> </Link>
                             <Link to="/account" className={GetNavLinkClass("account")}> <Account /> <span className="nav_name">Account</span> </Link>
+                            <Link to="/tasks" className={GetNavLinkClass("tasks")}> <Task/> <span className='nav_name'>Tasks</span></Link>
                         </div>
                     </div>
                 </nav>
