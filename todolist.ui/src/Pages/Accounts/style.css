@@ -14,4 +14,5 @@
 
 .status .btn{
     cursor: default;
+    max-width: 80px;
 }

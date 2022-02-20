@@ -33,7 +33,7 @@ const Account = () => {
             </div>
             <br />
             <div className="form-group row">
-                <div className="col-sm-2 btn-group btn-group-toggle status" data-toggle="buttons">
+                <div className="btn-group btn-group-toggle status" data-toggle="buttons">
                     <label className={(isActive ? "active " : "") + "btn btn-secondary btn-sm"}>
                         {isActive ? 'Active' : 'Inactive'}
                     </label>
