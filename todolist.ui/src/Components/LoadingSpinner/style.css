@@ -2,3 +2,13 @@
     width: 1.5rem;
     height: 1.5rem;
 }
+
+#loading-spinner.cover{
+    background-color: rgba(255,255,255,0.5);
+    cursor: default;
+    position: absolute;
+}
+
+#loading-spinner.cover h5{
+    background-color: rgba(255,255,255,0.8);
+}

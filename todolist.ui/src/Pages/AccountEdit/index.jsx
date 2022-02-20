@@ -51,7 +51,7 @@ const AccountEdit = () => {
 
     return (
         <Template title="Change password">
-            { isLoading ? <Loading /> : "" }
+            { isLoading ? <Loading coverAllPage={true}/> : "" }
             <div className="col-4">
                 <form id="form-account-edit">
                     <div className="form-group">

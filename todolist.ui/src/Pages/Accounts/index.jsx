@@ -56,7 +56,7 @@ const Account = () => {
 
     return (
         <Template title="Account settings">
-            {isLoading ? <LoadingSpinner /> : "" }
+            {isLoading ? <LoadingSpinner coverAllPage={true} /> : "" }
             <img className="profile-img" src={Image} alt="user-image"/>
             <div className="form-group row">
                 <label htmlFor="name" className="col-sm-1 col-form-label field-title">Name</label>

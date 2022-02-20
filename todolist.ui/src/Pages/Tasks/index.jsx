@@ -7,7 +7,7 @@ const Tasks = () => {
 
     return (
         <Template title="Tasks">
-            {isLoading ? <LoadingSpinner/> : ''}
+            {isLoading ? <LoadingSpinner coverAllPage={true}/> : ''}
         </Template>
     )
 

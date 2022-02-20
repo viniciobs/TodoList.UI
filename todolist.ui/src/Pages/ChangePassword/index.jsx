@@ -57,7 +57,7 @@ const ChangePassword = () => {
 
     return (
         <Template title="Change password">
-            { isLoading ? <Loading /> : "" }
+            { isLoading ? <Loading coverAllPage={true} /> : "" }
             <div className="col-4">
                 <form id="form-change-password">
                     <div className="form-group">
