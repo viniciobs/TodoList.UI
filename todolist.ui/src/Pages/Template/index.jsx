@@ -14,7 +14,7 @@ import {
     BiTask as Task
 } from "react-icons/bi";
 
-const Header = (props) => {
+const Template = (props) => {
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -69,4 +69,4 @@ const Header = (props) => {
     )
 }
 
-export default Header;
+export default Template;
