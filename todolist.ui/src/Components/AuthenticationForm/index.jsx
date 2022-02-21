@@ -8,8 +8,6 @@ const Form = (props) => {
     const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState();
 
-    let btn = document.getElementById('btn-submit');
-
     const submit = (e) => {
         let btn = e.target;
 
